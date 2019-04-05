@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+    body, html{
+        height: 100%;
+        width: 100%;
+    }
+   #burger{
+        width: 35px;
+        height: 10px;
+        background-color: white;
+        margin: 6px 0;
+    }     
+    #burgerContainer{
+        float: right;
+        margin-top: -85px;
+        margin-right: 60px;
+    } 
+    #title{
+        color: silver;
+        margin-top : 10px;
+        margin-left : 30px;
+        font-size: 50px;
+        text-align: center;
+        text-shadow: 10px 10px black;
+    }
+    #navbar{
+        width: 100.75%;
+        height: 125px;
+        background-color: royalblue;
+        margin-left: -20px;
+        margin-top: -70px;
+        box-shadow: 0px 0px 20px grey;
+    }
+    
+    body{
+        background-color: black;
+        background-image: url("https://s3.envato.com/files/251688753/preview-image.jpg");
+        background-repeat: no-repeat;
+        height:100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    .dropbtn{
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropbtn:hover, .dropbtn:focus{
+        background-color: green;
+    }
+    .dropdown {
+        float: right;
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover { background-color : #ddd }
+
+    .show { display : block; }
+
+   
+    </style>
+
+    <body>
+        <head>
+            <title>RHS CLUBS</title>
+            <link rel="shortcut icon" href="http://d2jqoimos5um40.cloudfront.net/site_0673/45451.png">
+        </head>
+
+
+        
+
+        <div id = "navbar">
+            <div id = "textContainer">
+                <div id = "title">
+                    <h1>Rocklin High School Clubs</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div id = "burgerContainer">
+                <button onclick="myFunction()" class="dropbtn">Club List</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#club1">Club 1</a>
+                    <a href="#club2">Club 2</a>
+                    <a href="#club3">Club 3</a>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }   
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                     var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                         openDropdown.classList.remove('show');
+                    }
+                 }
+            }
+        }
+    
+    </script>
+
+</html>
