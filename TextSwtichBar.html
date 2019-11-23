@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        html, body {
+            padding:0;
+            margin:0;
+        }
+        body{
+            background-color:cyan;
+        }
+        .navitem {
+            display:inline-block;
+            font-family: 'Lato', sans-serif;
+            width:calc(100%/3);
+            text-align:center;
+            font-size:1.3em;
+            outline:none;
+            cursor:pointer;
+            transition:0.3s;
+            margin-right:-4px;
+        }
+        .navitem:hover {
+            background-color:#e1e1e1;
+        }
+        #navbar {
+            background-color:#f1f1f1;
+            width:100%;
+            margin:0 auto;
+            box-shadow: 0px 0px 20px grey;
+            border-bottom:2px solid #dddddd;
+        }
+        #unimportant {
+            background-color:antiquewhite;
+            width:90%;
+            margin:0 auto;
+        }
+        #unimportant p {
+            padding:10px;
+        }
+        .tabcontent {
+            margin-top:-16px;
+            min-height:100px;
+            width:100%;
+            background-color:#f1f1f1;
+            display:none;
+        }
+        .tabcontent p {
+            padding:10px;
+        }
+    </style>
+
+    <body>
+        <div id="navbar">
+            <div class="navitem" onclick="displayContent(event, 'item1txt')">
+                <p><b>item1</b></p>
+            </div>
+            <div class="navitem" onclick="displayContent(event, 'item2txt')">
+                <p><b>item2</b></p>
+            </div>
+            <div class="navitem" onclick="displayContent(event, 'item3txt')">
+                <p><b>item3</b></p>
+            </div>
+        </div>
+
+        <div id="item1txt" class="tabcontent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel iaculis sapien, vitae bibendum magna. Pellentesque id ligula facilisis, tincidunt dui ac, posuere magna. In feugiat metus vitae ultrices rutrum. Integer id lectus egestas, eleifend magna sit amet, faucibus leo. Suspendisse congue consequat metus a venenatis. Integer ultrices gravida aliquet. Aenean tincidunt eros vitae tellus maximus, vel porttitor urna semper. Curabitur porta cursus blandit. Ut velit libero, semper non gravida nec, porttitor sed elit. Donec vel leo nisi. Aliquam a elit ac est ullamcorper accumsan nec eget tellus. Aenean lobortis dictum tempor. Vestibulum suscipit ipsum quis lacus maximus, egestas commodo ante placerat. Fusce bibendum turpis non justo sagittis, ac congue lacus commodo. Donec ac imperdiet eros, sit amet eleifend felis.</p>
+        </div>
+        <div id="item2txt" class="tabcontent">
+            <p>Other Words from random Synonyms & Antonyms Choose the Right Synonym More Example Sentences Learn More about random. ... These example sentences are selected automatically from various online news sources to reflect current usage of the word 'random.' Views expressed in the examples do</p>
+        </div>
+        <div id="item3txt" class="tabcontent">
+            <p>Food is any substance[1] consumed to provide nutritional support for an organism. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.</p>
+        </div>
+
+        <div id="unimportant">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel iaculis sapien, vitae bibendum magna. Pellentesque id ligula facilisis, tincidunt dui ac, posuere magna. In feugiat metus vitae ultrices rutrum. Integer id lectus egestas, eleifend magna sit amet, faucibus leo. Suspendisse congue consequat metus a venenatis. Integer ultrices gravida aliquet. Aenean tincidunt eros vitae tellus maximus, vel porttitor urna semper. Curabitur porta cursus blandit. Ut velit libero, semper non gravida nec, porttitor sed elit. Donec vel leo nisi. Aliquam a elit ac est ullamcorper accumsan nec eget tellus. Aenean lobortis dictum tempor. Vestibulum suscipit ipsum quis lacus maximus, egestas commodo ante placerat. Fusce bibendum turpis non justo sagittis, ac congue lacus commodo. Donec ac imperdiet eros, sit amet eleifend felis.
+
+                    Integer tincidunt augue commodo, ullamcorper lorem at, gravida ex. Aenean venenatis, metus at bibendum rutrum, risus orci commodo nulla, imperdiet feugiat ipsum sapien sit amet mi. Sed fringilla, ipsum non gravida faucibus, leo sem congue elit, sed feugiat purus sapien id arcu. Fusce aliquam lobortis nibh. Praesent non augue lectus. Pellentesque lobortis felis porta, tempor ligula eu, dictum metus. Curabitur sit amet est ipsum.
+                    
+                    Mauris elementum, magna eu vestibulum pellentesque, risus magna malesuada tellus, eu efficitur est ex non turpis. Aliquam erat volutpat. Nam vel nisl eget dui efficitur iaculis. Curabitur sit amet ornare erat. Suspendisse potenti. Nunc sodales efficitur leo quis bibendum. Proin ut sapien libero. Vivamus fermentum eros maximus justo rhoncus ultrices.
+                    
+                    Integer rutrum aliquet velit, ac tristique ante bibendum sit amet. Suspendisse tempor neque tellus, ac egestas magna maximus sed. Proin nec molestie mi. Duis eget convallis justo, quis imperdiet ipsum. In hac habitasse platea dictumst. Donec id posuere diam. Mauris pellentesque lacinia ipsum in commodo. Vivamus auctor metus fermentum, pharetra tellus at, fermentum sapien. Donec luctus bibendum interdum. In efficitur, dolor eu aliquet dapibus, lorem velit blandit leo, eget venenatis justo libero quis erat. Nulla eu sollicitudin est. Mauris sed ornare ex. Proin vel velit a lectus volutpat finibus non id turpis.
+                    
+                    Suspendisse lobortis nisl nec augue egestas molestie. Nulla id sem id lorem semper fringilla. Integer porttitor dui nec sagittis iaculis. Etiam ex magna, sollicitudin vitae convallis quis, porta ut velit. Nunc in leo malesuada, accumsan massa eu, consectetur arcu. In non dignissim leo, nec gravida odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse sit amet ante id risus tincidunt suscipit ut ullamcorper elit. Donec volutpat mollis molestie. Aliquam a neque id ante mollis tempor a eu sem. Donec rutrum id turpis pretium hendrerit. Curabitur semper porta eleifend.</p>
+        </div>
+    </body>
+
+    <script>
+        function displayContent(event, name) {
+            var i, tabcontent;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++){
+                tabcontent[i].style.display = "none";
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+            document.getElementById(name).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+</html>

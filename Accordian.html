@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body, html {
+            padding:0;
+            margin:0;
+        }
+        .accordion {
+            background-color:#808080;
+            color:white;
+            height:50px;
+            width:100%;
+            text-align:left;
+            font-size:1.3em;
+            outline:none;
+            cursor:pointer;
+        }
+        .active, .accordion:hover {
+            background-color: #444444;
+        }
+        .panel {
+            padding:0;
+            background-color:#dddddd;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .container {
+            background-color:#dddddd;
+            width:80%;
+            text-align:center;
+            margin:0 auto;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+        <button class="accordion">Section 1</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu lectus at justo interdum porttitor. Ut vitae semper tortor, vitae dictum nulla. Praesent placerat non mauris ut vulputate. Phasellus nec sodales nisi, ut euismod lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse eu nisi ex. In sagittis nisi ipsum, nec tincidunt arcu convallis quis. Phasellus non auctor ipsum. In eu nibh accumsan, aliquam arcu congue, luctus orci. </p>
+            </div>
+        <button class="accordion">Section 2</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu lectus at justo interdum porttitor. Ut vitae semper tortor, vitae dictum nulla. Praesent placerat non mauris ut vulputate. Phasellus nec sodales nisi, ut euismod lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse eu nisi ex. In sagittis nisi ipsum, nec tincidunt arcu convallis quis. Phasellus non auctor ipsum. In eu nibh accumsan, aliquam arcu congue, luctus orci. </p>
+            </div>
+        <button class="accordion">Section 3</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu lectus at justo interdum porttitor. Ut vitae semper tortor, vitae dictum nulla. Praesent placerat non mauris ut vulputate. Phasellus nec sodales nisi, ut euismod lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse eu nisi ex. In sagittis nisi ipsum, nec tincidunt arcu convallis quis. Phasellus non auctor ipsum. In eu nibh accumsan, aliquam arcu congue, luctus orci. </p>
+            </div>
+            </div>
+    </body>
+
+    <script>
+    
+        var accordions = document.getElementsByClassName("accordion");
+        for(var i = 0; i < accordions.length; i++){
+            accordions[i].onclick = function() {
+                var panel = this.nextElementSibling;
+                this.classList.toggle("active");
+                if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            }
+        }
+    </script>
+</html>

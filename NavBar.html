@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        html, body {
+            padding:0;
+            margin:0;
+            font-family: 'Lato', sans-serif;
+            color:whitesmoke;
+        }
+        #navbar{
+            width:100%;
+            background-color:rgb(66, 177, 66);
+            color:whitesmoke;
+            box-shadow: 0px 0px 20px grey;
+        }
+        .item {
+            display:inline-block;
+            margin-right:-4px;
+            width:calc(100.25%/6);
+            font-size:20px;
+            text-align:center;
+            height:50px;
+        }
+        #home {
+            font-weight:bold;
+        }
+        #home a {
+            text-decoration:none;
+            color:whitesmoke;
+        }
+        .item:hover {
+            background-color:#555555;
+            cursor:pointer;
+            outline:none;
+        }
+        .item p {
+            margin-top:10px;
+        }
+        #itemcontainer{
+            margin:0;
+        }
+        .bar {
+            height:5px;
+            width:35px;
+            background-color:white;
+            margin-bottom:4px;
+        }
+        #hamburger {
+            position:absolute;
+            right:0;
+            top:0;
+            margin-right:10px;
+            margin-top:12px;
+            display:none;
+        }
+        .itemf {
+            display:none;
+        }
+        #shrink {
+            display:none;
+        }
+        @media screen and (max-width: 500px){
+            .item {
+                display:none;
+            }
+            #home {
+                display:inline-block;
+                background-color:rgb(66, 177, 66);
+            }
+            #hamburger {
+                display:block;
+            }
+            #shrink {
+                background-color:#555555;
+                min-height:100px;
+                opacity:0;
+                display:block;
+                transition:0.2s;
+            }
+            .itemf {
+                height:50px;
+                width:100%;
+                display:block;
+                background-color:#555555;
+                margin-top:-16px;
+                text-align:center;
+            }
+            .itemf p {
+                padding-top:15px;
+            }
+            .itemf:hover {
+                background-color:#666666;
+            }
+        }
+    </style>
+    <body>
+        <div id="navbar">
+            <div id="itemcontainer">
+            <div id="home" class="item">
+                <p><a href="#">Home</a></p>
+            </div>
+            <div class="item">
+                <p>item 2</p>
+            </div>
+            <div class="item">
+                <p>item 3</p>
+            </div>
+            <div class="item">
+                <p>item 4</p>
+            </div>
+            <div class="item">
+                <p>item 5</p>
+            </div>
+            <div class="item">
+                <p>item 6</p>
+            </div>
+            </div>
+            <div id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+            <div id="shrink">
+                <div class="itemf">
+                        <p>item 2</p>
+                    </div>
+                    <div class="itemf">
+                        <p>item 3</p>
+                    </div>
+                    <div class="itemf">
+                        <p>item 4</p>
+                    </div>
+                    <div class="itemf">
+                        <p>item 5</p>
+                    </div>
+                    <div class="itemf">
+                        <p>item 6</p>
+                    </div>
+            </div>
+    </body>
+    <script>
+        var hamburger = document.getElementById("hamburger");
+        var shrink = document.getElementById("shrink");
+        hamburger.onclick = function() {
+            if (shrink.style.opacity === "1"){
+                shrink.style.opacity = "0";
+            } else {
+                shrink.style.opacity = "1";
+            }
+        }
+    </script>
+</html>
